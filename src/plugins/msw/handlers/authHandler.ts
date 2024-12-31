@@ -1,12 +1,27 @@
 import { http, delay, HttpResponse } from 'msw';
+// Import the user list
+import users from '../auth-users/users_list.json';
+
 const isAuthenticated = (username, password) => {
-  return username === 'admin' && password === '123456';
+  // return username === 'assiduous' && password === 'KC0001';
+
+  // Find the user in the list
+  console.log('Users:', users);
+
+  const user = users.data.find((user) => user.name === username && user.code === password);
+  console.log('matching user:', user);
+
+  if (user) {
+    // Store the matched user object in local storage
+    localStorage.setItem('authenticatedUser', JSON.stringify(user));
+  }
+  return !!user;
 };
 
 export const handlerAuth = [
   http.post('/api/auth/login', async ({ request }) => {
     const { username, password } = (await request.json()) as { username: string; password: string };
-    console.log(username, password);
+    // console.log(username, password);
     const statusCode = isAuthenticated(username, password) ? 200 : 400;
     const data = isAuthenticated(username, password)
       ? {

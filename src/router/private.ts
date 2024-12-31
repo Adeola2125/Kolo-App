@@ -10,6 +10,11 @@ const PrivateRoutes = {
     {
       name: 'Dashboard',
       path: '/',
+      component: () => import('@/views/home/HomeView.vue')
+    },
+    {
+      name: 'Home',
+      path: '/home',
       component: () => import('@/views/dashboard/IndexView.vue')
     },
     {

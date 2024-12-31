@@ -17,6 +17,16 @@ const items = [
     value: '/'
   },
   {
+    title: t('Home'),
+    props: {
+      prependIcon: 'mdi-view-dashboard-outline',
+      link: true,
+      to: '/home',
+      exact: true
+    },
+    value: '/home'
+  },
+  {
     title: t('chat'),
     props: {
       prependIcon: 'mdi-chat-outline',

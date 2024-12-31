@@ -4,6 +4,7 @@ import { useUserStore } from '@/store/userStore';
 import { useRoute, useRouter } from 'vue-router';
 import { useLocale } from 'vuetify';
 import { login } from '@/api/user';
+import { useSnackbarStore } from '@/store';
 
 const { t } = useLocale();
 const checkbox = ref(true);
@@ -22,8 +23,8 @@ const formRules = reactive({
   ]
 });
 const formModel = reactive({
-  username: 'admin',
-  password: '123456'
+  username: 'assiduous',
+  password: 'KC0001'
 });
 
 const userStore = useUserStore();
@@ -31,6 +32,7 @@ const route = useRoute();
 const router = useRouter();
 const submiting = ref(false);
 const formValid = ref(false);
+const snackbarStore = useSnackbarStore();
 const handleSubmit = async () => {
   if (formValid.value === true) {
     submiting.value = true;
@@ -38,6 +40,7 @@ const handleSubmit = async () => {
       const { data } = await login(formModel);
       const { access_token } = data;
       submiting.value = false;
+      snackbarStore.showSuccessMessage('Congratulations 🎉, You Signed In Successfully!');
       userStore.setToken(access_token);
       router.replace(route.query.to ? String(route.query.to) : '/');
     } catch (error) {
@@ -62,10 +65,10 @@ const handleSubmit = async () => {
         />
       </VCol>
       <VCol cols="12">
-        <VLabel class="mb-1">{{ $t('password') }}</VLabel>
+        <VLabel class="mb-1">{{ $t('kolo_id') }}</VLabel>
         <VTextField
           variant="outlined"
-          type="password"
+          type="text"
           color="primary"
           :rules="formRules.password"
           v-model="formModel.password"
@@ -77,15 +80,33 @@ const handleSubmit = async () => {
             <template v-slot:label>{{ $t('remember') }}</template>
           </VCheckbox>
           <div class="ml-sm-auto">
-            <RouterLink to="/" class="text-primary text-decoration-none">{{ $t('forget_pass') }} ?</RouterLink>
+            <a
+              href="https://wa.me/8121253150?text=Hello Support, I am (__Your Username__) of Owo Kolo Challenge, I'd like to retrieve my Unique Identifier code."
+              class="text-primary text-decoration-none"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ $t('forget_id') }} ?
+            </a>
+            <!-- <RouterLink
+              to="https://wa.me/8119607193?text=Hello%Support,%I%am%____%of%Owo%Kolo%Challenge,%I'd%like%to%retrieve%my%Unique%Identifier."
+              class="text-primary text-decoration-none"
+              >{{ $t('forget_id') }} ?</RouterLink
+            > -->
           </div>
         </div>
       </VCol>
       <VCol cols="12" class="pt-0">
-        <VBtn :loading="submiting" type="submit" color="primary" block flat @click="handleSubmit">{{
+        <VBtn :loading="submiting" :muted="submiting" type="submit" color="#048c7f" block flat @click="handleSubmit">{{
           $t('sign_in')
         }}</VBtn>
       </VCol>
     </VRow>
   </VForm>
 </template>
+
+<style lang="scss">
+.text-primary {
+  color: #048c7f !important;
+}
+</style>

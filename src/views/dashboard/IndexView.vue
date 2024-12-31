@@ -27,7 +27,7 @@ import RecentTask from '@/components/dashboard/RecentTask.vue';
         <VCol cols="12" lg="4">
           <RecentTransaction />
         </VCol>
-        <!-- Product performence -->
+        <!-- Product performance -->
         <VCol cols="12" lg="8">
           <RecentTask />
         </VCol>

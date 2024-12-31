@@ -1,7 +1,7 @@
 import type { VuetifyOptions } from 'vuetify';
 // import colors from 'vuetify/lib/util/colors';
 
-export const staticPrimaryColor = '#304FFD';
+export const staticPrimaryColor = '#048c7f';
 // export const staticPrimaryColor = colors.blue.darken1;
 
 const theme: VuetifyOptions['theme'] = {

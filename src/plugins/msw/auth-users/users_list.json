@@ -1,0 +1,168 @@
+{
+  "data": [
+    {
+      "name": "Assiduous Smith",
+      "code": "KC0001",
+      "amount": 75000,
+      "top_saver": true,
+      "interest_rate": 50.0,
+      "target": 200000,
+      "created_at": "2024-12-26",
+      "start_date": "2025-01-01",
+      "end_date": "2025-06-30"
+    },
+    {
+      "name": "Ade",
+      "code": "KC0002",
+      "amount": 1500000,
+      "created_at": "2024-12-26",
+      "top_saver": false,
+      "interest_rate": 50.0,
+      "target": 500000,
+      "start_date": "",
+      "end_date": ""
+    },
+    {
+      "name": "Femi",
+      "code": "KC0003",
+      "amount": 7200000,
+      "created_at": "2024-12-26",
+      "top_saver": false,
+      "interest_rate": 50.0,
+      "target": 500000,
+      "start_date": "2025-01-01",
+      "end_date": "2025-06-30"
+    },
+    {
+      "name": "Ola",
+      "code": "KC0001",
+      "amount": 8500000,
+      "created_at": "2024-12-26",
+      "top_saver": false,
+      "interest_rate": 50.0,
+      "target": 500000,
+      "start_date": "2025-01-01",
+      "end_date": "2025-06-30"
+    },
+    {
+      "name": "Assiduous Kelly",
+      "code": "KC0001",
+      "amount": 7500000,
+      "created_at": "2024-12-26",
+      "top_saver": true,
+      "interest_rate": 50.0,
+      "target": 500000,
+      "start_date": "2025-01-01",
+      "end_date": "2025-06-30"
+    },
+    {
+      "name": "Assiduous Stella",
+      "code": "KC0001",
+      "amount": 7500000,
+      "created_at": "2024-12-26",
+      "top_saver": true,
+      "interest_rate": 50.0,
+      "target": 500000,
+      "start_date": "2025-01-01",
+      "end_date": "2025-06-30"
+    }
+  ],
+
+  "top_savers": [
+    {
+      "name": "Assiduous Smith",
+      "code": "KC0001",
+      "amount": 75000,
+      "created_at": "2024-12-26",
+      "top_saver": true,
+      "interest_rate": 50.0,
+      "target": 500000
+    },
+    {
+      "name": "Assiduous Kelly",
+      "code": "KC0001",
+      "amount": 7500000.0,
+      "created_at": "2024-12-26",
+      "top_saver": true,
+      "interest_rate": 50.0,
+      "target": 500000
+    },
+    {
+      "name": "Assiduous Stella",
+      "code": "KC0001",
+      "amount": 7500000.0,
+      "created_at": "2024-12-26",
+      "top_saver": true,
+      "interest_rate": 50.0,
+      "target": 500000
+    }
+  ],
+
+  "top_categories": [
+    {
+      "cat_name": "Phones & Accessories",
+      "total_members": "50",
+      "link": "https://chat.whatsapp.com/JwARMvHxUTZ4C1bcoX1rbB"
+    },
+    {
+      "cat_name": "Household Appliances",
+      "total_members": "100",
+      "link": "https://chat.whatsapp.com/JwARMvHxUTZ4C1bcoX1rbB"
+    },
+    {
+      "cat_name": "Land & Properties",
+      "total_members": "70",
+      "link": "https://chat.whatsapp.com/JwARMvHxUTZ4C1bcoX1rbB"
+    }
+  ],
+
+  "overall_top_members": [
+    {
+      "code_id": "KC0001",
+      "interest_rate": "15%",
+      "leading_amt": 250000.0,
+      "category": "Household Appliances"
+    },
+    {
+      "code_id": "KC0009",
+      "interest_rate": "15%",
+      "leading_amt": 215000.0,
+      "category": "Land & Properties"
+    },
+    {
+      "code_id": "KC0046",
+      "interest_rate": "15%",
+      "leading_amt": 190000.0,
+      "category": "Phones & Accessories"
+    }
+  ],
+
+  "members_that_just_saved": [
+    { "last_updated": "just now", "code_id": "KC0001" },
+    { "last_updated": "few minutes ago", "code_id": "KC0002" },
+    { "last_updated": "2 hours ago", "code_id": "KC0003" },
+    { "last_updated": "just now", "code_id": "KC0004" },
+    { "last_updated": "just now", "code_id": "KC0005" },
+    { "last_updated": "few minutes ago", "code_id": "KC0006" },
+    { "last_updated": "just now", "code_id": "KC0007" },
+    { "last_updated": "few minutes ago", "code_id": "KC0008" },
+    { "last_updated": "just now", "code_id": "KC0009" },
+    { "last_updated": "just now", "code_id": "KC0010" },
+    { "last_updated": "just now", "code_id": "KC0011" },
+    { "last_updated": "3 hours ago", "code_id": "KC0012" },
+    { "last_updated": "just now", "code_id": "KC0013" },
+    { "last_updated": "an hour ago", "code_id": "KC0014" },
+    { "last_updated": "just now", "code_id": "KC0015" },
+    { "last_updated": "few minutes ago", "code_id": "KC0016" },
+    { "last_updated": "just now", "code_id": "KC0017" },
+    { "last_updated": "just now", "code_id": "KC0018" },
+    { "last_updated": "about an hour ago", "code_id": "KC0019" },
+    { "last_updated": "just now", "code_id": "KC0020" },
+    { "last_updated": "just now", "code_id": "KC0021" },
+    { "last_updated": "just now", "code_id": "KC0022" },
+    { "last_updated": "few minutes ago", "code_id": "KC0023" },
+    { "last_updated": "just now", "code_id": "KC0024" },
+    { "last_updated": "just now", "code_id": "KC0025" },
+    { "last_updated": "about an hour ago", "code_id": "KC0026" }
+  ]
+}

@@ -11,10 +11,12 @@ import LoginForm from '@/components/forms/LoginForm.vue';
           <div class="d-flex flex-column align-center justify-center py-4">
             <Logo :height="32" />
           </div>
-          <div class="text-body-1 text-muted text-center mb-3">Vue Material Admin</div>
+          <div class="text-body-1 text-muted text-center mb-3 fs_25">
+            <b>Owo-Kolo Challenge</b>
+          </div>
           <LoginForm />
           <div class="d-flex align-center justify-center">
-            <a href="/auth/register" class="text-primary text-decoration-none"> {{ $t('Create account') }}</a>
+            <!-- <a href="/auth/register" class="text-primary text-decoration-none"> {{ $t('Create account') }}</a> -->
           </div>
         </VCardItem>
       </VCard>
@@ -27,7 +29,7 @@ import LoginForm from '@/components/forms/LoginForm.vue';
   overflow: visible;
   &::before {
     content: '';
-    background: url(/assets/svg/dot2.svg);
+    // background: url(/assets/svg/dot2.svg);
     width: 6rem;
     height: 6rem;
     position: absolute;
@@ -35,5 +37,8 @@ import LoginForm from '@/components/forms/LoginForm.vue';
     left: -2rem;
     z-index: 0;
   }
+}
+.text-primary {
+  color: #048c7f !important;
 }
 </style>

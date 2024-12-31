@@ -21,6 +21,7 @@
     "@vueuse/math": "10.9.0",
     "apexcharts": "3.46.0",
     "axios": "^1.6.7",
+    "bootstrap": "^5.3.3",
     "date-fns": "^3.3.1",
     "dayjs": "^1.11.10",
     "pinia": "^2.1.7",

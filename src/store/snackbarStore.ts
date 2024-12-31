@@ -11,6 +11,11 @@ export const useSnackbarStore = defineStore('snackbar', {
       this.color = color;
       this.message = message;
       this.showSnackbar = true;
+    },
+    showSuccessMessage(message, color = 'success') {
+      this.color = color;
+      this.message = message;
+      this.showSnackbar = true;
     }
   }
 });

@@ -9,6 +9,11 @@ import PerfectScrollbar from 'vue3-perfect-scrollbar';
 import 'vue3-perfect-scrollbar/dist/vue3-perfect-scrollbar.css';
 import VueApexCharts from 'vue3-apexcharts';
 import store from './store';
+
+// main.js or main.ts
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.bundle.js';
+
 const app = createApp(App);
 app.use(router);
 app.use(PerfectScrollbar);

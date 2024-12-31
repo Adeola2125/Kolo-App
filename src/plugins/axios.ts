@@ -45,7 +45,7 @@ axiosIns.interceptors.response.use(
         router.push('/auth/login');
         break;
       case 400:
-        snackbarStore.showMessage('Auth Failed');
+        snackbarStore.showMessage('Auth Failed. Username or ID is incorrect!');
         break;
       default:
         break;
