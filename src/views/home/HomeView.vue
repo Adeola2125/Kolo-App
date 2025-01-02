@@ -12,10 +12,17 @@ import { useRoute, useRouter } from 'vue-router';
 
 const route = useRoute();
 const router = useRouter();
-const shuffledMembers = ref([]);
+const shuffledMembers = ref<User[]>([]);
 const countdown = ref('');
 
 const authenticatedUser = ref(JSON.parse(localStorage.getItem('authenticatedUser') || '{}'));
+
+// Define the type for your user objects
+interface User {
+  code_id: string;
+  lastUpdated: string; // Assuming you have this field for the "recently saved" logic
+  // Add other fields as necessary
+}
 
 // Function to shuffle an array
 function shuffleArray(array) {
@@ -116,9 +123,17 @@ const handleSubmit = async () => {
                   displayCountdown
                 }}</span></span
               >
-              <span v-if="authenticatedUser.target > 0 && displayCountdown === '00:00:00:00'"
-                ><i class="bi bi-box" style="vertical-align: middle; font-size: 18px"></i>Withdraw</span
+              <a
+                v-if="authenticatedUser.target > 0 && displayCountdown === '00:00:00:00'"
+                href="https://wa.me/8121253150?text=Hello Admin, I reached my milestone 🎉 and i am set for withdrawal.%A0%A0Account Number:_____%A0%A0Bank:_____%A0%A0Account Name:_____"
+                class="text-primary text-decoration-none fs_16"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="padding: 7px 20px"
               >
+                <i class="bi bi-box ml-2" style="vertical-align: middle; font-size: 18px; margin-right: 5px"></i
+                >Withdraw
+              </a>
             </div>
             <div class="notibody py-0" style="color: #000; font-size: 1.5em; line-height: 1.4">
               {{ authenticatedUser !== null ? authenticatedUser.name : '' }}
@@ -188,7 +203,9 @@ const handleSubmit = async () => {
                   <span style="font-size: 16px; color: #048c7f"
                     >{{ userRemaining.percentageRemaining.toFixed(2) }}%</span
                   >
-                  <span v-if="userRemaining.percentageRemaining <= 85"> away from</span>
+                  <span v-if="userRemaining.percentageRemaining <= 85">
+                    <span class="text-danger"> far</span> from</span
+                  >
                   <span v-else> close to</span>
                   your target! You have
                   <span style="font-size: 16px; color: #048c7f">
@@ -330,37 +347,6 @@ const handleSubmit = async () => {
                   >
                 </marquee>
               </div>
-
-              <!-- <div class="notification d-flex" style="overflow: hidden">
-                <div class="notibody py-2" style="color: #000; font-size: 1em; line-height: 2.8">
-                  Other Kolonaires that saved recently
-                </div>
-
-                <marquee
-                  width="88%"
-                  height="30px"
-                  direction="up"
-                  scrollamount="1"
-                  behavior="scroll"
-                  style="
-                    z-index: 99;
-                    /* position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); */
-                    max-width: 100%;
-                    padding-left: 22px;
-                  "
-                  class=""
-                >
-                  <span
-                    class="d-block saved_marq_items"
-                    v-for="scroll_item in users.members_that_just_saved"
-                    :key="scroll_item.code_id"
-                    >User <span class="" style="font-weight: 600">{{ scroll_item.code_id }}</span> just saved.</span
-                  >
-                </marquee>
-              </div> -->
             </div>
           </VCol>
 

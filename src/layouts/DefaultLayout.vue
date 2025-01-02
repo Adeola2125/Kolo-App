@@ -22,7 +22,7 @@ const authenticatedUser = ref(JSON.parse(localStorage.getItem('authenticatedUser
       <!-- <VChip class="w-100 p-0 m-0" style="border-radius: 0px"> -->
       <!-- <div style="background-color: RGBA(160, 33, 239, 0.1)">81cdc6 -->
       <div style="background-color: #b3e8dc">
-        <marquee class="" width="100%">
+        <marquee scrollAmount="3" class="" width="100%">
           <span class="" style="font-size: 13px; color: #048c7f">
             Stay consistent and keep the energy up -
             <span class="" style="font-weight: 600">Owo Kolo Challenge</span> is yours to conquer! Remember persistence
@@ -35,7 +35,7 @@ const authenticatedUser = ref(JSON.parse(localStorage.getItem('authenticatedUser
       <VContainer class="app-container py-0">
         <div class="page-wrapper">
           <h3 class="page-title">
-            Hello <span style="color: #048c7f">Kolonaire</span>,
+            Hello <span style="color: #048c7f">Kolonaire </span>,
             <!-- Hello {{ authenticatedUser.name }}, -->
             <!-- {{ t(String(route.name).toLocaleLowerCase()) }} -->
           </h3>

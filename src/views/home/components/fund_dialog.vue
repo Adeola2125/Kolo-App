@@ -36,7 +36,7 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          Done
+          I have made transfer
         </a>
         <button class="declineButton" data-dismiss="modal">Cancel</button>
       </div>
